@@ -14,7 +14,7 @@ const int NUMBERS = 5;
 const int MAX_PICKS = 20;         	
 // Mega Millions Rules
 const int MEGA_MILLION_NUMBERS_RANGE = 70;  // 1 to 70
-const int MEGA_NUMBER_RANGE = 25;			// 1 to 25
+const int MEGA_NUMBER_RANGE = 24;			// 1 to 24
 // Powerball Rules
 const int POWERBALL_NUMBERS_RANGE = 69;		// 1 to 69
 const int POWER_NUMBER_RANGE = 26; 		    // 1 to 26
