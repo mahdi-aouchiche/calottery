@@ -21,7 +21,7 @@ There is no affiliation with the actual game, it is only a personal project and 
 ---
 ---
 > **Note 3**
-I am not promotting nor suggesting to play, and I am not going to be involved with any capital gain or loss.
+I am not promoting nor suggesting to play, and I am not going to be involved with any capital gain or loss.
 ---
 > **Important** This is the official website to get more accurate information [here](https://www.calottery.com/).
 ---
