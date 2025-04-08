@@ -1,10 +1,19 @@
 #include "../header/ca_lottery.hpp"
 
+/**
+ * @brief Display the menu to the customer for a selection
+ * 
+ */
 void display_selection_menu() {
     cout << "For Mega Millions quick pick select:   '1'" << endl;
     cout << "For Power Ball quick pick select   :   '2'" << endl;
 }
 
+/**
+ * @brief get which lotto the customer wants to buy
+ * 
+ * @return the type of lotto to generate. 
+ */
 int lotto_type() {
     int selection = 0; 
     
@@ -27,7 +36,12 @@ int lotto_type() {
     return selection;
 }
 
-int num_quick_picks(int MAX_PICKS) {
+/**
+ * @brief  get the number of quick picks to generate from the customer
+ * Note: limit to MAX_PICKS
+ * @return the amount of requested quick picks  
+ */
+int num_quick_picks() {
     int quick_picks_amount = 0;
     
     while (quick_picks_amount < 1 || quick_picks_amount > MAX_PICKS) {
@@ -51,14 +65,20 @@ int num_quick_picks(int MAX_PICKS) {
     return quick_picks_amount;
 }
 
+/**
+ * @brief display the random generated quick picks  
+ * 
+ * @param range_1 the max number in the range to pick mega millions or powerball numbers  
+ * @param range_2 the max number in the range to pick a Mega number or a Power number
+ */
 void display_quick_picks(int range_1, int range_2) {
 
     /* Variables */
     vector<int> my_picks;
     int number;
 
-    /* Pick 5 numbers from 1 to range_1 */
-    for(int i = 1 ; i <= 5; i++) {
+    /* Pick numbers for mega millions or powerball from 1 to range_1 */
+    for(int i = 1 ; i <= NUMBERS; i++) {
         number = rand() % range_1 + 1;
 
         /* Check if number is already picked */

@@ -22,6 +22,6 @@ const int POWER_NUMBER_RANGE = 26; 		    // 1 to 26
 void display_selection_menu();
 void display_quick_picks(int,int);
 int lotto_type();
-int num_quick_picks(int);
+int num_quick_picks();
 
 #endif // __CA_LOTTERY_HPP__

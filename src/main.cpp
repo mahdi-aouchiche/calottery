@@ -9,7 +9,7 @@ int main()
     game_type = lotto_type();
 
     /* Select number of quick picks sets to display */
-    quick_picks_amount = num_quick_picks(MAX_PICKS);
+    quick_picks_amount = num_quick_picks();
     
     /* Randomize the seed for the rand function*/
     srand(time(0));
@@ -21,7 +21,7 @@ int main()
             cout << "  " << "|MEGA|" << endl;
         
             for(int i = 1; i <= quick_picks_amount; i++){
-                cout << "\t" << i << " :" ;
+                printf("\t%2d :", i);
                 display_quick_picks(MEGA_MILLION_NUMBERS_RANGE, MEGA_NUMBER_RANGE);
                 cout << endl;
             }
