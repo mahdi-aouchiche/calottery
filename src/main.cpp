@@ -28,13 +28,25 @@ int main()
             break;
 
         case 2:
-            cout << "Power Ball numbers are: " << endl;
+            cout << "PowerBall numbers are: " << endl;
 	        cout << "\t" << "     |-------------- NUMBERS --------------|";
             cout << "  " << "|POWER|" << endl;
         
             for(int i = 1; i <= quick_picks_amount; i++){
                 cout << "\t" << i << " :";
                 display_quick_picks(POWERBALL_NUMBERS_RANGE, POWER_NUMBER_RANGE);
+                cout << endl;
+            }
+            break;
+
+            case 3:
+            cout << "SuperLotto numbers are: " << endl;
+	        cout << "\t" << "     |-------------- NUMBERS --------------|";
+            cout << "  " << "|MEGA|" << endl;
+        
+            for(int i = 1; i <= quick_picks_amount; i++){
+                cout << "\t" << i << " :";
+                display_quick_picks(SUPER_LOTTO_NUMBERS_RANGE, SUPER_MEGA_NUMBER_RANGE);
                 cout << endl;
             }
             break;

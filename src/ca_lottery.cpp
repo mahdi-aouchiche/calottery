@@ -3,25 +3,27 @@
 /**
  * @brief Display the menu to the customer for a selection
  * 
- */
+*/
 void display_selection_menu() {
-    cout << "For Mega Millions quick pick select:   '1'" << endl;
-    cout << "For Power Ball quick pick select   :   '2'" << endl;
+    cout << "1 : for Mega Millions quick pick." << endl;
+    cout << "2 : for PowerBall quick pick." << endl;
+    cout << "3 : for SuperLotto Plus quick pick." << endl;
+    cout << "Select a quick pick from the available options: ";
 }
 
 /**
  * @brief get which lotto the customer wants to buy
  * 
  * @return the type of lotto to generate. 
- */
+*/
 int lotto_type() {
     int selection = 0; 
     
-    while ( !(selection == 1 || selection == 2)) {
+    while ( !(selection == 1 || selection == 2 || selection == 3) ) {
         display_selection_menu();
         cin >> selection; 
 
-        if(!(selection == 1 || selection == 2)) {
+        if(!(selection == 1 || selection == 2 || selection == 3)) {
             cout << "Wrong selection!" << endl;
         }
 
@@ -40,7 +42,7 @@ int lotto_type() {
  * @brief  get the number of quick picks to generate from the customer
  * Note: limit to MAX_PICKS
  * @return the amount of requested quick picks  
- */
+*/
 int num_quick_picks() {
     int quick_picks_amount = 0;
     
@@ -57,7 +59,7 @@ int num_quick_picks() {
             cin.clear();             // reset failbit
             cin.ignore(255, '\n');   // skip bad input
             cout << "Please input a number between 1 and ";
-	        cout << MAX_PICKS << endl;
+	        cout << MAX_PICKS << ": " << endl;
         }
         cout << endl;
     }
@@ -68,16 +70,16 @@ int num_quick_picks() {
 /**
  * @brief display the random generated quick picks  
  * 
- * @param range_1 the max number in the range to pick mega millions or powerball numbers  
+ * @param range_1 the max number in the range to pick NUMBERS (5) numbers 
  * @param range_2 the max number in the range to pick a Mega number or a Power number
- */
+*/
 void display_quick_picks(int range_1, int range_2) {
 
     /* Variables */
     vector<int> my_picks;
     int number;
 
-    /* Pick numbers for mega millions or powerball from 1 to range_1 */
+    /* Pick NUMBERS (5) from 1 to range_1 */
     for(int i = 1 ; i <= NUMBERS; i++) {
         number = rand() % range_1 + 1;
 
@@ -89,7 +91,7 @@ void display_quick_picks(int range_1, int range_2) {
         }
     }
 
-    /* Sort the first 5 picks */
+    /* Sort the numbers */
     sort(my_picks.begin(), my_picks.end());
 
     /* Pick mega or power number from 1 to range_2 */
