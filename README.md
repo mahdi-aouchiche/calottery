@@ -1,4 +1,4 @@
-# CA Lottery Games : PowerBall & Mega Millions & SuperLotto Plus
+# CA Lotto Games : PowerBall & Mega Millions & SuperLotto Plus
 
 > Author: Mahdi Aouchiche (<https://github.com/mahdi-aouchiche/calottery>)
 
@@ -14,7 +14,7 @@
 
 ---
 > **Note 1**
-Verify that the range of numbers to choose from is acurate and updated at the present day for better results.
+Verify that the range of numbers to choose from is acurate and updated at the present day for more realistic results.
 ---
 ---
 > **Note 2**
