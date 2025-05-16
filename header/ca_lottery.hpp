@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <time.h>
 #include <cstdlib>
+#include <random>
 using namespace std;
 
 // Pick 5 numbers and a 1 Mega or Power
@@ -29,5 +30,6 @@ void display_selection_menu();
 void display_quick_picks(int,int);
 int lotto_type();
 int num_quick_picks();
+int random_number(int min, int max);
 
 #endif // __CA_LOTTERY_HPP__

@@ -81,7 +81,8 @@ void display_quick_picks(int range_1, int range_2) {
 
     /* Pick NUMBERS (5) from 1 to range_1 */
     for(int i = 1 ; i <= NUMBERS; i++) {
-        number = rand() % range_1 + 1;
+        //number = rand() % range_1 + 1;
+        number = random_number(1, range_1);
 
         /* Check if number is already picked */
         if( find(my_picks.begin(), my_picks.end(), number) != my_picks.end()) {
@@ -101,4 +102,19 @@ void display_quick_picks(int range_1, int range_2) {
     for(vector<int>::iterator it = my_picks.begin(); it != my_picks.end(); it++) {
         cout << "\t" << *it;
     }
+}
+
+/**
+ * @brief Generates a random number using a uniform distribution.
+ * 
+ * @param min the minimum range for the random number
+ * @param max the maximum range for the random number 
+ * @return int random number in the interval [min, max] 
+ */
+int random_number(int min, int max) {
+    random_device rd;   // obtain a seed from the system
+    mt19937 generate(rd()); // Seed generator
+    uniform_int_distribution<int> distribution(min, max);
+
+    return distribution(generate);
 }
